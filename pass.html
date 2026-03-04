@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter Code</title>
+</head>
+<body>
+  <h2>Enter Access Code</h2>
+  <input type="password" id="codeInput" placeholder="Enter code">
+  <button onclick="checkCode()">Submit</button>
+
+  <script>
+    function checkCode() {
+      const correctCode = "89423";
+      const userInput = document.getElementById("codeInput").value;
+
+      if (userInput === correctCode) {
+        localStorage.setItem("accessGranted", "1");
+        window.location.href = "/index.html";
+      } else {
+        alert("Incorrect code.");
+      }
+    }
+  </script>
+</body>
+</html>

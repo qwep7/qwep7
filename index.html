@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+    <script>
+  // Check access on page load
+  if (localStorage.getItem("accessGranted") !== "1") {
+    window.location.href = "/pass.html";
+  }
+</script>
+    
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>qwep1</title>
